@@ -17,7 +17,7 @@ pipeline {
 
         stage('Executar Testes com Newman') {
             steps {
-                bat 'npx newman run "JSONPlaceholder API Tests.postman_collection.json" --environment="local.postman_environment.json"'
+                bat 'npx newman run "jsonplaceholder-api-tests.json" --environment="local.postman_environment.json"'
             }
         }
     }
