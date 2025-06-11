@@ -1,11 +1,11 @@
 {
 	"info": {
-		"_postman_id": "da4d443b-b3d7-4580-be42-04ea2ab444a3",
-		"name": "JSONPlaceholder API Tests",
+		"_postman_id": "5176f934-62a4-43b1-99c2-7c815df097e4",
+		"name": "JSONPlaceholder API Tests Copy",
 		"description": "Coleção de testes para a API JSONPlaceholder",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17686427",
-		"_collection_link": "https://postman-study-6836.postman.co/workspace/Postman-API-Fundamentals-Studen~c29ac85a-bba9-4ab7-9db9-a0d8c69ead91/collection/17686427-da4d443b-b3d7-4580-be42-04ea2ab444a3?action=share&source=collection_link&creator=17686427"
+		"_collection_link": "https://postman-study-6836.postman.co/workspace/Postman-API-Fundamentals-Studen~c29ac85a-bba9-4ab7-9db9-a0d8c69ead91/collection/17686427-5176f934-62a4-43b1-99c2-7c815df097e4?action=share&source=collection_link&creator=17686427"
 	},
 	"item": [
 		{
@@ -14,7 +14,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -28,7 +27,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -36,12 +37,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts"
@@ -88,12 +86,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts"
@@ -108,7 +103,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -122,7 +116,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -139,12 +135,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/1",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts/1",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts",
@@ -160,7 +153,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -174,7 +166,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -182,12 +176,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/1",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts/1",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts",
@@ -203,7 +194,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -217,7 +207,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -225,12 +217,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/users",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/users",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"users"
@@ -245,7 +234,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -259,7 +247,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -267,12 +257,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/comments",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/comments",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"comments"
@@ -287,7 +274,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -301,7 +287,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -309,12 +297,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/albums",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/albums",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"albums"
@@ -352,12 +337,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/invalid_id",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts/invalid_id",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts",
@@ -405,12 +387,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts"
@@ -457,12 +436,9 @@
 					}
 				},
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/invalid_id",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts/invalid_id",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts",
@@ -478,7 +454,6 @@
 				{
 					"listen": "test",
 					"script": {
-						"type": "text/javascript",
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
@@ -492,7 +467,9 @@
 							"pm.test(\"Response body is not empty\", function () {",
 							"    pm.expect(pm.response.text()).to.not.be.empty;",
 							"});"
-						]
+						],
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -500,12 +477,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://jsonplaceholder.typicode.com/posts/invalid_id",
-					"protocol": "https",
+					"raw": "{{baseUrl}}/posts/invalid_id",
 					"host": [
-						"jsonplaceholder",
-						"typicode",
-						"com"
+						"{{baseUrl}}"
 					],
 					"path": [
 						"posts",
