@@ -10,12 +10,14 @@ pipeline {
 
         stage('Executar Testes e API Local em Paralelo') {
             parallel {
-                    failFast: true
+                failFast: true
+
                 stage('Iniciar API Local') {
                     steps {
                         bat 'npx json-server --watch db.json --host 127.0.0.1'
                     }
                 }
+
                 stage('Executar Testes com Newman') {
                     steps {
                         bat 'ping -n 20 127.0.0.1 > nul'
@@ -25,6 +27,7 @@ pipeline {
             }
         }
     }
+
     post {
         always {
             echo 'Finalizando todos os processos node.exe para limpeza...'
