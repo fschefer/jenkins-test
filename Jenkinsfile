@@ -12,7 +12,7 @@ pipeline {
             parallel {
                 stage('Iniciar API Local') {
                     steps {
-                        bat 'npx json-server --watch db.json'
+                        bat 'npx json-server --watch db.json --host 127.0.0.1'
                     }
                 }
                 stage('Executar Testes com Newman') {
