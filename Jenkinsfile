@@ -10,6 +10,7 @@ pipeline {
 
         stage('Executar Testes e API Local em Paralelo') {
             parallel {
+                    failFast: true
                 stage('Iniciar API Local') {
                     steps {
                         bat 'npx json-server --watch db.json --host 127.0.0.1'
