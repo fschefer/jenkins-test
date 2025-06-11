@@ -17,7 +17,7 @@ pipeline {
                 }
                 stage('Executar Testes com Newman') {
                     steps {
-                        bat 'ping -n 100 127.0.0.1 > nul'
+                        bat 'ping -n 20 127.0.0.1 > nul'
                         bat 'npx newman run "jsonplaceholder-api-tests.json" --environment="local.postman_environment.json"'
                     }
                 }
