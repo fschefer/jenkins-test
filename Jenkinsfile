@@ -2,18 +2,29 @@ pipeline {
     agent any
 
     stages {
-        stage('Instalar Newman') {
+        stage('Instalar Dependências') {
             steps {
-                
-                bat 'npm install -g newman'
+                bat 'npm install'
             }
         }
 
-        stage('Executar testes com Newman') {
+        stage('Iniciar API Local') {
             steps {
-                
-                bat 'npx newman run "jsonplaceholder-api-tests.json"'
+                bat 'start "API Local" cmd /c "npx json-server --watch db.json"'
+                bat 'timeout /t 5'
             }
+        }
+
+        stage('Executar Testes com Newman') {
+            steps {
+                bat 'npx newman run "JSONPlaceholder API Tests.postman_collection.json" --environment="local.postman_environment.json"'
+            }
+        }
+    }
+    post {
+        always {
+            echo 'Tentando parar a API local...'
+            bat 'taskkill /IM node.exe /F || echo "Processo node não encontrado para parar."'
         }
     }
 }
